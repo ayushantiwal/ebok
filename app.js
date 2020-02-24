@@ -11,7 +11,7 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 
-require('dotenv').config({ path: 'MONGO_URL' });
+require('dotenv').config({ env: 'MONGO_URL' });
 
 
 var routes = require('./routes/index');
