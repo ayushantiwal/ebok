@@ -12,7 +12,7 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require('dotenv').config();
-var MongoClient = mongodb.MongoClient;
+// var MongoClient = mongodb.MongoClient;
 // const MONGODB_USER = "ayushalexx";
 // const MONGODB_PASS = "antiwal";
 
@@ -23,13 +23,6 @@ var userRoutes = require("./routes/user");
 // var uristring = process.env.MONGOURI;
 
 var app = express();
-
-var mongoURI = "mongodb://localhost:27017/shopping";
-var MongoDB = mongoose.connect(mongoURI).connection;
-MongoDB.on('error', function (err) { console.log(err.message); });
-MongoDB.once('open', function () {
-  console.log("mongodb connection open");
-});
 
 // const auth = { user: MONGODB_USER, password: MONGODB_PASS }
 
