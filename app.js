@@ -2,7 +2,7 @@ var createError = require('http-errors');
 const bodyparser = require("body-parser");
 var express = require('express');
 var path = require('path');
-var mongodb = require("mongodb");
+// var mongodb = require("mongodb");
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var expresshbs = require("express-handlebars");
@@ -13,8 +13,8 @@ var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require('dotenv').config();
 var MongoClient = mongodb.MongoClient;
-const MONGODB_USER = "ayushalexx";
-const MONGODB_PASS = "antiwal";
+// const MONGODB_USER = "ayushalexx";
+// const MONGODB_PASS = "antiwal";
 
 
 var routes = require('./routes/index');
@@ -24,9 +24,9 @@ var uristring = process.env.MONGOURI;
 
 var app = express();
 
-const auth = { user: MONGODB_USER, password: MONGODB_PASS }
+// const auth = { user: MONGODB_USER, password: MONGODB_PASS }
 
-MongoClient.connect(uristring, auth, { useNewUrlParser: true, useUnifiedTopology: true });
+MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
