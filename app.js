@@ -10,7 +10,9 @@ var session = require("express-session");
 var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
-require("dotenv").env();
+require("dotenv").config({
+  path: '../.env'
+});
 
 
 console.log(process.env.MONGO_URI)
