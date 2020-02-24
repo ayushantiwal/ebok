@@ -21,7 +21,8 @@ var userRoutes = require("./routes/user");
 var uristring = process.env.MONGOURI;
 
 var app = express();
-mongoose.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+var MongoClient = mongodb.MongoClient;
+MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 
 require("./config/passport");
