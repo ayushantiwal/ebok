@@ -20,13 +20,20 @@ var MongoClient = mongodb.MongoClient;
 var routes = require('./routes/index');
 var userRoutes = require("./routes/user");
 
-var uristring = process.env.MONGOURI;
+// var uristring = process.env.MONGOURI;
 
 var app = express();
 
+var mongoURI = "mongodb://localhost:27017/shopping";
+var MongoDB = mongoose.connect(mongoURI).connection;
+MongoDB.on('error', function (err) { console.log(err.message); });
+MongoDB.once('open', function () {
+  console.log("mongodb connection open");
+});
+
 // const auth = { user: MONGODB_USER, password: MONGODB_PASS }
 
-MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
+// MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
