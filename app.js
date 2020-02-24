@@ -10,7 +10,7 @@ var session = require("express-session");
 var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
-require("dotenv").config();
+require('dotenv').config({ path: '.env' });
 
 
 
@@ -20,7 +20,8 @@ var userRoutes = require("./routes/user");
 
 
 var app = express();
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 
 require("./config/passport");
