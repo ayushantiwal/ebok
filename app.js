@@ -10,8 +10,7 @@ var session = require("express-session");
 var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
-
-require('dotenv').config({ env: 'MONGO_URL' });
+require("dotenv").config();
 
 
 var routes = require('./routes/index');
@@ -20,7 +19,7 @@ var userRoutes = require("./routes/user");
 
 
 var app = express();
-mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 require("./config/passport");
 
 // view engine setup
