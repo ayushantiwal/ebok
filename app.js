@@ -1,7 +1,6 @@
 var createError = require('http-errors');
 const bodyparser = require("body-parser");
 var express = require('express');
-const dotenv = require("dotenv");
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -12,7 +11,8 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 
-dotenv.config();
+require('dotenv').config({ path: 'MONGO_URL' });
+
 
 var routes = require('./routes/index');
 var userRoutes = require("./routes/user");
