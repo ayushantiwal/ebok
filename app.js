@@ -20,7 +20,7 @@ var userRoutes = require("./routes/user");
 
 
 var app = express();
-mongoose.connect("mongodb://localhost:27017/shopping", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 require("./config/passport");
 
 // view engine setup
