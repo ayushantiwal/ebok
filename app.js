@@ -11,7 +11,7 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require("dotenv").config({
-  path: '../.env'
+  path: './.env'
 });
 
 
