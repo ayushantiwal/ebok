@@ -20,7 +20,6 @@ var userRoutes = require("./routes/user");
 
 
 var app = express();
-mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 
