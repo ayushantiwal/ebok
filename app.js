@@ -24,7 +24,9 @@ var uristring = process.env.MONGOURI;
 
 var app = express();
 
-MongoClient.connect(uristring, { auth: { user: MONGODB_USER, password: MONGODB_PASS } }, { useNewUrlParser: true, useUnifiedTopology: true });
+const auth = { user: MONGODB_USER, password: MONGODB_PASS }
+
+MongoClient.connect(uristring, auth, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
