@@ -13,13 +13,15 @@ var MongoStore = require("connect-mongo")(session);
 require("dotenv").config();
 
 
+console.log(process.env.MONGO_URI)
+
 var routes = require('./routes/index');
 var userRoutes = require("./routes/user");
 
 
 
 var app = express();
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 require("./config/passport");
 
 // view engine setup
