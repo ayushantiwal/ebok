@@ -17,10 +17,10 @@ dotenv.config();
 var routes = require('./routes/index');
 var userRoutes = require("./routes/user");
 
-const MONGO = process.env.MONGO_URL
+
 
 var app = express();
-mongoose.connect("MONGO", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 require("./config/passport");
 
 // view engine setup
