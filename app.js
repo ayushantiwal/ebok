@@ -12,7 +12,7 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require('dotenv').config();
-var MongoClient = mongodb.MongoClient;
+// var MongoClient = mongodb.MongoClient;
 
 
 var routes = require('./routes/index');
@@ -22,7 +22,7 @@ var uristring = process.env.MONGOURI;
 
 var app = express();
 
-MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
