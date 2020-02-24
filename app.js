@@ -12,7 +12,7 @@ var passport = require("passport");
 var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require('dotenv').config();
-
+var MongoClient = mongodb.MongoClient;
 
 
 var routes = require('./routes/index');
@@ -21,7 +21,7 @@ var userRoutes = require("./routes/user");
 var uristring = process.env.MONGOURI;
 
 var app = express();
-var MongoClient = mongodb.MongoClient;
+
 MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
