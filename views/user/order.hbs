@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1>Your Orders</h1>
+			<hr>
+			{{#each orders }}
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul class="list-group">
+						{{#each this.cart.items}}
+						<li class="list-group-item">
+							<span class="badge">{{ this.price}}</span>
+							<strong>{{ this.item.title }} | {{ this.qty }}</strong>
+						</li>
+						{{/each}}
+					</ul>
+					<div class="panel-footer py-2"><strong>Total Price: {{ this.cart.totalPrice}}</strong>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>

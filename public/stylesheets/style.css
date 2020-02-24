@@ -1,0 +1,119 @@
+header .row .col-md-4 {
+  padding: 4vmin 2vmin;
+}
+
+.row.row-cols-1 {
+  width: -10rem;
+}
+
+header .row .col-md-7 {
+  padding: 12vmin 0vmin;
+}
+
+.card-title {
+  padding: 0%;
+  margin: 0%;
+}
+
+h1,
+h2 {
+  font-size: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Slabo 27px', serif;
+  color: #707070;
+}
+
+header h1 {
+  padding-bottom: 30px;
+}
+
+.card-img {
+  max-height: 175px;
+}
+
+img {
+  max-height: 230px;
+  max-width: 530px;
+  height: 120%;
+  width: 130%;
+
+}
+
+.card-text {
+  padding: 0%;
+  margin: 0%;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 14px;
+  padding: 1%;
+}
+
+.card-body {
+  height: 170px;
+}
+
+.form-control {
+  width: 400px;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+footer {
+  overflow-x: hidden;
+  padding: 10vmin 18vmin;
+}
+
+
+/* @media screen and (max-width:1366px) {
+  .column {
+    float: left;
+    float: right;
+    width: 30%;
+    padding: 0 8px;
+  }
+} */
+
+
+@media screen and (max-width:1024px) {
+  nav {
+    height: 45px;
+  }
+
+  h3,
+  h4 {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .main-img {
+    height: 200px;
+    width: 350px;
+  }
+
+  .column {
+    float: center;
+    float: left;
+    width: 50%;
+    padding: 0 8px;
+  }
+
+}
