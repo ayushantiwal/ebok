@@ -13,6 +13,8 @@ var flash = require("connect-flash");
 var MongoStore = require("connect-mongo")(session);
 require('dotenv').config();
 var MongoClient = mongodb.MongoClient;
+const MONGODB_USER = "ayushalexx";
+const MONGODB_PASS = "antiwal";
 
 
 var routes = require('./routes/index');
@@ -22,7 +24,7 @@ var uristring = process.env.MONGOURI;
 
 var app = express();
 
-MongoClient.connect(uristring, { auth: { user: ayushlexx, password: antiwal } }, { useNewUrlParser: true, useUnifiedTopology: true });
+MongoClient.connect(uristring, { auth: { user: MONGODB_USER, password: MONGODB_PASS } }, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
