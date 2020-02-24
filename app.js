@@ -22,7 +22,7 @@ var uristring = process.env.MONGOURI;
 
 var app = express();
 var MongoClient = mongodb.MongoClient;
-MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+MongoClient.connect(uristring, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
 require("./config/passport");
